@@ -27,7 +27,6 @@
                         <table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th></th>
                                 <th><b>No</b></th>
                                 <th><b>NIP</b></th>
                                 <th><b>Nama</b></th>
@@ -37,8 +36,28 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td>Tiger</td>
+                                <td>1</td>
+                                <td>Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
                                 <td>Nixon</td>
                                 <td>System Architect</td>
                                 <td>Edinburgh</td>
@@ -79,15 +98,6 @@
 $(document).ready(function() {
     $('#example-checkbox').DataTable({
         responsive: false,
-        columnDefs: [ {
-            orderable: false,
-            className: 'select-checkbox',
-            targets:0,
-        } ],
-        select: {
-            style: 'multi',
-            selector: 'td:first-child'
-        },
         order: [ 1, 'asc' ],
         bFilter: true,
         bLengthChange: true,
@@ -96,9 +106,9 @@ $(document).ready(function() {
         "searching": true,
         "language": {
             "info": " _START_ - _END_ of _TOTAL_ ",
-            "sLengthMenu": "<span class='custom-select-title'>Rows per page:</span> <span class='custom-select'> _MENU_ </span>",
+            "sLengthMenu": "<span class='custom-select-title'>Baris per halaman:</span> <span class='custom-select'> _MENU_ </span>",
             "sSearch": "",
-            "sSearchPlaceholder": "Search",
+            "sSearchPlaceholder": "Cari",
             "paginate": {
                 "sNext": " ",
                 "sPrevious": " "
@@ -113,28 +123,7 @@ $(document).ready(function() {
     
     /// Select value
     $('.custom-select-info').hide();
-    
-    $('#example-checkbox tbody').on( 'click', 'tr', function () {
-        if ( $(this).hasClass('selected') ) {
-            var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
-            $(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
-            if ($(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text() != null){
-                $(this).closest('.dataTables_wrapper').find('.custom-select-info').show();
-                //show delet button
-            } else{
-                $(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
-            }
-        }
-        else {
-            var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
-            $(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
-        }
-        if($('#example-checkbox').find('.selected').length == 0){
-            $(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
-        }
-    } );
     $("div.data-table-title").html('<h2 class="pmd-card-title-text">Data Anggota</h2>');
-    $(".custom-select-action").html('<button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">delete</i></button><button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">more_vert</button>');
     
 } );
 </script>
