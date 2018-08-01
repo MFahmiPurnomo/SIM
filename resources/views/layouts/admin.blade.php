@@ -31,6 +31,11 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css">
 
+<!-- Select2 css-->
+<link rel="stylesheet" type="text/css" href="{{asset('admin/components/select2/css/select2.min.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('admin/components/select2/css/select2-bootstrap.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('admin/components/select2/css/pmd-select2.css')}}" />
+
 <!-- Propeller dataTables css-->
 <link rel="stylesheet" type="text/css" href="{{asset('admin/components/data-table/css/pmd-datatable.css')}}">
 

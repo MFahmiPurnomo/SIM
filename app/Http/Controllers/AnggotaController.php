@@ -9,4 +9,10 @@ class AnggotaController extends Controller
     public function index() {
     	return view('anggota.index');
     }
+
+     public function create() {
+    	return view('anggota.create');
+    }
+
 }
+

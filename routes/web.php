@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/anggota/index', 'AnggotaController@index');
 
+Route::get('/anggota/create','AnggotaController@create');
+
